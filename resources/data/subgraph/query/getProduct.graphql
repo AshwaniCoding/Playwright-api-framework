@@ -1,0 +1,8 @@
+query Product($productId: ID!) {
+  product(id: $productId) {
+    id
+    inStock
+    name
+    price
+  }
+}
