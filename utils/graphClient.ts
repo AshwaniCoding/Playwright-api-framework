@@ -27,7 +27,7 @@ export class GraphClient {
 
     setQueryOrMutation(fileName: string): GraphClient {
 
-        const rootFilePath = "resources/data/subgraph/query/";
+        const rootFilePath = `resources/data/${process.env.ENV}/subgraph/query/`;
         const filePath = path.resolve(process.cwd(), rootFilePath, fileName);
         this.query = fs.readFileSync(filePath, 'utf-8');
 

@@ -43,7 +43,7 @@ export class RestClient {
 
   setBody(fileName: any): RestClient {
 
-    const rootFilePath = "resources/data/test-rest/";
+    const rootFilePath = `resources/data/${process.env.ENV}/test-rest/`;
     const filePath = path.resolve(process.cwd(), rootFilePath, fileName);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
 
